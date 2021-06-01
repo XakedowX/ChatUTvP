@@ -19,8 +19,11 @@ class ServerNode:
 
     def receive_msg(self):
         while True:
-            data = self.connection.recv(1024).decode()
-            print(data)
+            data = self.node.recv(1024).decode()
+                if data == '':
+                    pvariable = 2
+                else:
+                    print(data)
 
     def main(self):
         while True:
