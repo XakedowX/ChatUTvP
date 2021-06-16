@@ -10,7 +10,7 @@ pvariable = 0
 class ClientNode:
     def __init__(self):
         self.node = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        port_and_ip = port_and_ip = ('127.0.0.1', 12007)
+        port_and_ip = port_and_ip = ('127.0.0.1', 12008)
         self.node.connect(port_and_ip)
 
     def send_msg(self, MSG):

@@ -9,7 +9,7 @@ username = input("Your username: ")
 class ServerNode:
     def __init__(self):
         self.node = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        port_and_ip = ('127.0.0.1', 12007)
+        port_and_ip = ('127.0.0.1', 12008)
         self.node.bind(port_and_ip)
         self.node.listen(5)
         self.connection, addr = self.node.accept()
@@ -20,12 +20,13 @@ class ServerNode:
     def receive_msg(self):
         while True:
             data = self.node.recv(1024).decode()
-                if data == '':
-                    pvariable = 2
-                else:
-                    print(data)
+            if data == '':
+                pvariable = 2
+            else:
+                print(data)
 
     def main(self):
+        message = input()
         while True:
             if message == '':
                 pvariable = 1
